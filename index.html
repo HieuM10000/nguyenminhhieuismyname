@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Ensure responsive scaling on mobile :contentReference[oaicite:17]{index=17} -->
+  <title>Nguyễn Minh Hiếu - Giới thiệu bản thân</title>
+  <style>
+    /* Base styling */
+    body {
+      font-family: Arial, sans-serif;  /* Clean, modern sans-serif font */
+      margin: 0;  /* Remove default margin to use full viewport width */
+      background: #ffffff;  /* White base background for content */
+      color: #000000;       /* Black text for good contrast on light backgrounds */
+      scroll-behavior: smooth; /* Smooth scrolling for in-page links */
+    }
+    /* Sidebar navigation menu */
+    .sidebar {
+      position: fixed;   /* Fix the nav to the side of the viewport */
+      top: 0;
+      right: 0;
+      width: 200px;      /* Sidebar width (reserve space in content accordingly) */
+      height: 100%;      /* Full height sidebar */
+      background-color: #f1f1f1;  /* Light gray background for nav :contentReference[oaicite:18]{index=18} */
+      border-left: 1px solid #ccc; /* Subtle border to separate nav from content */
+      overflow: auto;    /* Enable scrolling in nav if content exceeds viewport height */
+      padding-top: 20px; /* Top padding to space links down a bit from top */
+    }
+    .sidebar a {
+      display: block;            /* Each link is a block, so the whole area is clickable */
+      padding: 12px 16px;        /* Some padding for larger click/tap area */
+      text-decoration: none;     /* Remove default link underline */
+      color: #000;               /* Nav links in black for good contrast on light gray */
+      font-weight: bold;
+    }
+    .sidebar a:hover {
+      background-color: #04AA6D; /* Hover state: green highlight :contentReference[oaicite:19]{index=19} */
+      color: #fff;              /* White text on hover */
+    }
+    .sidebar a.active {
+      background-color: #04AA6D; /* Active/current link highlight (same green) */
+      color: #fff;
+    }
+
+    /* Main content area */
+    .content {
+      margin-right: 220px; /* Leave space on right for sidebar (200px width + 20px gap):contentReference[oaicite:20]{index=20} */
+      padding: 20px;
+    }
+    /* Section styling */
+    section {
+      margin-bottom: 20px; /* space between sections */
+      padding: 20px;
+      border-radius: 4px;  /* slightly rounded corners for a modern touch */
+    }
+    section h2 {
+      margin-top: 0;      /* No extra top margin since we already have padding in section */
+    }
+    /* Specific section background colors for accents */
+    #gioithieu { background-color: #ffffff; }  /* White background for introduction (clean base) */
+    #kynang    { background-color: #C8E6C9; }  /* Light green background for skills section */
+    #thanhtich { background-color: #BBDEFB; }  /* Light blue background for achievements section */
+
+    /* Responsive Layout: Sidebar becomes top nav on smaller screens */
+    @media screen and (max-width: 700px) {
+      .sidebar {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: auto;       /* Let nav height adjust to content */
+        border-left: none;  /* No border on top nav */
+        border-bottom: 1px solid #ccc; /* Horizontal separator under nav */
+        padding: 10px 0;
+        text-align: center; /* Center the links in the horizontal nav */
+      }
+      .sidebar a {
+        float: left;        /* Float links to line them up horizontally */
+        padding: 10px 15px; /* Adjust padding for smaller nav */
+      }
+      .sidebar a.active, .sidebar a:hover {
+        /* For horizontal layout, keep the highlight styling (background color) same */
+        background-color: #04AA6D;
+        color: #fff;
+      }
+      .content {
+        margin-right: 0;    /* No right margin when nav is on top */
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .sidebar a {
+        float: none;            /* Stack links vertically */
+        display: block;
+        text-align: center;     /* Center text when stacked */
+      }
+      .sidebar {
+        text-align: center;     /* Center the container (redundant if links already centered) */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Right Sidebar Navigation -->
+  <nav class="sidebar">
+    <!-- Navigation links to sections -->
+    <a href="#gioithieu" class="active">Giới thiệu</a>
+    <a href="#kynang">Kỹ năng</a>
+    <a href="#thanhtich">Thành tích</a>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="content">
+    <!-- Introduction Section -->
+    <section id="gioithieu">
+      <h2>Giới thiệu</h2>
+      <p>Tôi là Nguyễn Minh Hiếu, học sinh tại IEC Quảng Ngãi. Tôi đam mê công nghệ, đặc biệt là Tin học và Bóng đá. Tôi tham gia các cuộc thi Tin học và thể thao, cũng như luôn tìm cách phát triển bản thân qua học hỏi và trải nghiệm.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="kynang">
+      <h2>Kỹ năng</h2>
+      <ul>
+        <li>Lập trình C++</li>
+        <li>Lập trình Web</li>
+        <li>Bóng đá</li>
+      </ul>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="thanhtich">
+      <h2>Thành tích</h2>
+      <ul>
+        <li>Giải Nhì HSG Tin học cấp trường</li>
+        <li>Giải Nhất cuộc thi chạy 100m khối 6/7</li>
+        <li>Giải Nhì Bóng đá Trung học cơ sở</li>
+        <li>Học sinh xuất sắc của trường</li>
+        <li>Thành tích nổi bật trong chương trình ESL Oxford International Curriculum và các kỳ thi IOE</li>
+      </ul>
+    </section>
+  </div>
+
+</body>
+</html>
